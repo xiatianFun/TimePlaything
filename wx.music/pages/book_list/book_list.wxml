@@ -1,0 +1,26 @@
+<!--pages/book_list/book_list.wxml-->
+<view class='sousuo'>
+  <input type="text" placeholder="搜索书籍" class='input' />
+  <image src="../../img/sousuo.png" class="fd" />
+</view>
+
+<view class='jx'>精选</view>
+
+<view class="books">
+  <block wx:for="{{books}}" wx:key="index">
+    <view class="content" bindtap='details' data-id='{{item.id}}'>
+    <view class="img"> 
+      <image src="{{item.Photo.image}}" class='binding' />
+    </view>
+    <view class="introduction">
+         <view class='info'>
+        <view class='title'>《{{item.title}}》</view>
+        <view class='author'>{{item.author}}</view>
+        <view class='like'>{{}}喜欢</view>
+      </view>
+    </view>
+     
+    </view>
+  </block>
+  <view class="nocontent"></view>
+</view>

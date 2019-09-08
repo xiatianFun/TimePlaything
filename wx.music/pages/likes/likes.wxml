@@ -1,0 +1,48 @@
+
+<view wx:if='{{isShow}}'>
+<view class='fater' style="background:url('../../img/timg.jpg');background-size: 800rpx;">
+  <view class='children'>
+    <view class='userinfo'>
+      <image src="{{userInfo.avatarUrl}}" class='tx'></image>
+      <view class='userinfo_right'>
+        <view class="userinfo_nickname">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+
+    <view class='bottom'>
+      <view class='left'>
+        <image src='../../img/gy.png' class='gy'></image>
+        <text>关于我们</text>
+      </view>
+
+      <view class='right'>
+        <view style='font-size:31rpx;'>{{likenum}}</view>
+        <text style='color: #999;'>喜欢的书</text>
+      </view>
+    </view>
+  </view>
+   <view class="sanjiao"></view>
+</view>
+
+<view class='likes'>喜欢</view></view>
+<view class="likesbook" wx:for='{{likebooks}}' bindtap="btnmusic" data-id="{{item.id}}">
+  {{item.Music.title}}
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<view wx:if='{{!isShow}}'>
+    <button type="primary"   bindtap="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handlerGetUserInfo" style="width:90%;margin-top:300px;"> 登陆 </button>
+ 
+ </view>
+
+

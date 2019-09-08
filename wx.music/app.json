@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/book_list/book_list",
+    "pages/likes/likes",
+    "pages/details/details"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "时光玩物",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/san.png",
+        "selectedIconPath": "img/san_1.png",
+        "text": "流行"
+      },
+      {
+        "pagePath": "pages/book_list/book_list",
+        "iconPath": "img/yuan.png",
+        "selectedIconPath": "img/yuan_1.png",
+        "text": "书单"
+      },
+      {
+        "pagePath": "pages/likes/likes",
+        "iconPath": "img/zhen.png",
+        "selectedIconPath": "img/zhen_1.png",
+        "text": "喜欢"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

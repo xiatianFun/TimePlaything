@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view>
+    <image src="../../img/timg.png" class="{{!isplay?'playimg':'playimgz'}}"></image>
+</view>
+<view class="{{!isplay?'container':'containerz'}}">
+  
+  <view wx:for="{{image}}" wx:key="index">
+    <image src='{{item.Photo.image}}' class='music'></image>
+  </view>
+
+  <view class='pic'>
+    <image src='../../img/fx.png' class='fx'></image>
+     <image src="{{!liked?'../../img/xin.png':'../../img/xin_active.png'}}" class='{{xin}}' bindtap="btnlike"></image>
+     <view class="likenum">{{fav_nums}}</view>
+  </view>
+
+
+  <view class='content_fater'>
+    <view class='content' wx:for="{{image}}" wx:key="index">
+      {{item.content}}
+    </view>
+
+    <view class="category"><text style="color:#fff;">音</text>乐。</view>
+  </view>
+
+
+</view>
+
+
+<view class='bofang' wx:for="{{image}}" wx:key="index">
+    <view class='bofang_chlidren'>
+      <image src="{{num==1?'../../img/zuo.png':'../../img/zuo_1.png'}}" class='left' bindtap="previouspage"></image>
+      <text class='name' bindtap="musicGo">{{item.title}}</text>
+      <image src="{{nextMusic?'../../img/you.png':'../../img/you_1.png'}}"  class='right' bindtap="nextpage"></image>
+    </view>
+  </view>
+  <view class='musicGo'>{{isplay?'正在播放音乐':'点击歌名开始播放'}}</view>

@@ -1,0 +1,29 @@
+<!--pages/details/details.wxml-->
+<view class='head'>
+    <image src='{{books.Photo.image}}' class='image'></image>
+    <view class="title">《{{books.title}}》</view>
+    <view class="author">{{books.author}}</view>
+</view>
+
+<view class='comment'>
+  <view class="size">短评</view>
+  <view class="commentList">
+      <view class="comments" wx:for="{{books.Comments}}">{{item.content}}</view>
+  </view>
+
+</view>
+
+<view class='synopsis'>
+  <view class="size">内容简介</view>
+  <view class="info">{{books.summary}}</view>
+</view>
+
+<view class="footer">
+  <view class="footer_1">
+    <input type="text" placeholder="输入短评" class='input' bindinput='inputvalue' bindconfirm='addcomment'/>
+    <view class="pic">
+      <image src="../../img/xin.png" class="xin" />
+      <image src="../../img/fx.png"  class="fx"/>
+    </view>
+  </view>
+</view>
